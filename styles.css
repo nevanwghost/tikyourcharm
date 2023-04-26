@@ -9,19 +9,33 @@ body {
 }
 
 #hero-container {
-    background-image: url(./img/1243.JPG);
-    background-position: center;
+    background-image: url(./img/Hero.JPG);
+    background-position: -180px 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; /* hero image full per viewport to cover entire top screen */
+    height: calc(100vh - 30px); /* hero image full per viewport to cover entire top screen */
+}
+
+#hero-container::before {
+    content: "";
+    position: absolute; 
+    bottom: 30px;
+    background: rgba(0,0,0, 0.5);
+    width: 100%;
+    height: 100%;
+    
 }
 
 #marriage-time {
-    background-image: url(./img/125.JPG);
+    background-image: url(./img/HolyMatrimony.JPG);    
+}
+
+#wedding-gift {
+    background-image: url(./img/WeddingGift.JPG);
 }
 
 #quote {
-    background-image: url(./img/1017.JPG);
+    background-image: url(./img/Quote.JPG);
 }
 
 .img-overlay::before {
@@ -32,8 +46,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
-
 
 #container {
     max-width: 980px;
@@ -69,16 +81,77 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.invitation-text {
+#hero-text {
     position: absolute;
     left: 10px;
-    bottom: 0;
+    bottom: 20px;
     width: 50%;
     font-size: 1.25rem;
 }
 
 .text-justify {
     text-align: justify;
+}
+
+#album {
+
+}
+
+#album-img-container {
+    height: 400px;
+    width: 100%;
+}
+
+#album-img-1 {
+    background-image: url(img/album/1.JPG);
+    height: 400px;
+    width: 100%;
+    background-position: -100px -350px;
+    background-size: 200%;    
+}
+
+#album-img-2 {
+    background-image: url(img/album/2.JPG);
+}
+
+#album-img-3 {
+    background-image: url(img/album/3.JPG);
+}
+
+#album-img-4 {
+    background-image: url(img/album/4.JPG);
+}
+
+#album-img-5 {
+    background-image: url(img/album/5.JPG);
+}
+
+#album-img-6 {
+    background-image: url(img/album/6.JPG);
+}
+
+#album-img-7 {
+    background-image: url(img/album/7.JPG);
+}
+
+#album-img-8 {
+    background-image: url(img/album/8.JPG);
+}
+
+#album-img-9 {
+    background-image: url(img/album/9.JPG);
+}
+
+.album-img {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+}
+
+.cf::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 #footer {
@@ -88,11 +161,49 @@ body {
     text-align: center;
     background-color: #000;
     color: #fff;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
+    height: 30px;
 }
 
 @media only screen and (min-width: 768px) {
+    #hero-container {
+        background-position: 0px -150px;
+    }
+
+    #album {
+        height: 750px;
+    }
+    
+    #album-img-container {
+        
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    
+    }
+    
+    #album-img-1 {
+        background-image: url(img/album/1.JPG);
+        background-color: black;    
+        background-size: 400%;
+        background-repeat: no-repeat;
+        background-position: -200px -200px;
+    }
+
+    .album-img {
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+        background-color: black;    
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 10px solid #ddd;
+        box-shadow: 0px 0px 15px rgba(0,0,0, 0.6);
+        border-radius: 10px;
+    }
 
 }
