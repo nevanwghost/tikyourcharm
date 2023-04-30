@@ -7,19 +7,25 @@ body {
     position: relative;
     height: 100vh;
     max-height: 100vh;
-    background-image: url(./img/Hero.JPG);
+    background-image: url(./img/Body.JPG);
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 150px;
     overflow: hidden;
 }
 
 #header {
-    display: block;
+    float: left;
     width: 75%;
     background-color: rgba(0,0,0, 0.5);
-    height: 35%;
+    height: 140px;
     border-bottom-right-radius: 50px;
     color: #FFF;
+}
+
+#header-left {
+    width: 75%;
 }
 
 #invitation {
@@ -49,9 +55,19 @@ body {
 }
 
 #holy-matrimony {
-    text-align: justify;
+    font-size: 0.5rem;
     margin-left: 20px;
-    font-size: 0.6rem;
+}
+
+#date {
+    /* background-color: blueviolet; */
+    width: 25%;
+    font-size: 0.9rem;
+    float: right;
+    text-align: center;
+    height: 30%;
+    line-height: 30px;
+    /* border-bottom-left-radius: 50px; */
 }
 
 #container {
@@ -64,7 +80,7 @@ body {
 #wedding-gift {
     width: 100%;
     font-size: 0.7rem;
-    text-align: justify;
+    text-align: center;
     padding: 0 10px;
 }
 
