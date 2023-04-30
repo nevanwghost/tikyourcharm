@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastScrollPos = window.pageYOffset;
     let scrollingDown;
   
-    const scrollSpeed = 200; // Adjust the scroll speed (in ms)
+    const scrollSpeed = 500; // Adjust the scroll speed (in ms)
     const threshold = 0.95;
   
     function getTargetSection() {
