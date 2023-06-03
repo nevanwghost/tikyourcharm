@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Writing Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        .ink-writing {
+            font-family: 'Sacramento', cursive;
+            font-size: 48px;
+            color: #000;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ink-writing" id="inkWriting">W</h1>
+
+    <script>
+        function createPathAndAnimate(textElement) {
+            const svgNS = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNS, "svg");
+            svg.setAttribute("width", "1");
+            svg.setAttribute("height", "1");
+            svg.style.overflow = "visible";
+
+            const path = document.createElementNS(svgNS, "path");
+            path.setAttribute("id", "path");
+            path.setAttribute("d", "M0,48 Q0,-15 5,48");
+            path.setAttribute("fill", "transparent");
+            svg.appendChild(path);
+
+            const text = document.createElementNS(svgNS, "text");
+            text.setAttribute("font-family", "Sacramento, cursive");
+            text.setAttribute("font-size", "48");
+            text.textContent = textElement.textContent;
+
+            const animateMotion = document.createElementNS(svgNS, "animateMotion");
+            animateMotion.setAttribute("dur", "2s");
+            animateMotion.setAttribute("repeatCount", "1");
+            animateMotion.setAttribute("path", "M0,48 Q0,-15 5,48");
+
+            text.appendChild(animateMotion);
+            svg.appendChild(text);
+
+            textElement.textContent = "";
+            textElement.appendChild(svg);
+        }
+
+        const inkWritingElement = document.getElementById("inkWriting");
+        createPathAndAnimate(inkWritingElement);
+    </script>
+</body>
+</html>

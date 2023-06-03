@@ -3,112 +3,143 @@
 }
 
 body {
-    width: 100%;
-    position: relative;
+    font-size: 16px;
+}
+.full-height {
     height: 100vh;
-    max-height: 100vh;
-    background-image: url(./img/Body.JPG);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 150px;
-    overflow: hidden;
 }
 
-#header {
-    float: left;
-    width: 75%;
-    background-color: rgba(0,0,0, 0.5);
-    height: 140px;
-    border-bottom-right-radius: 50px;
-    color: #FFF;
+#hero {
+    font-size: 0.8em;
+    background-color: aqua;
+    position: relative;
 }
 
-#header-left {
-    width: 75%;
-}
-
-#invitation {
-    display: block;
-    padding-top: 5px;
-    font-size: .4rem;
-    margin:0;
-    color: #FFF;
+#hero-top {
     text-align: center;
 }
 
-#family-from {
-    text-align: justify;
-    font-size: 0.35rem;
-    display: block;
-    height: 40px;
+#hero-top h1,
+#hero-top p,
+#hero-bottom h1,
+#hero-bottom p,
+#timeline h3,
+#timeline hr {
+    margin: 0 auto;   
 }
 
-#male-family-text {
-    margin-left: 20px;
-    float: left;
-}
-
-#female-family-text {
-    margin-left: 30px;
-    float: left;
-}
-
-#holy-matrimony {
-    font-size: 0.5rem;
-    margin-left: 20px;
-}
-
-#date {
-    /* background-color: blueviolet; */
-    width: 25%;
-    font-size: 0.9rem;
-    float: right;
-    text-align: center;
-    height: 30%;
-    line-height: 30px;
-    /* border-bottom-left-radius: 50px; */
-}
-
-#container {
+#hero-bottom {    
+    width: 100%;
     position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+#family {
+    position: relative;
+}
+
+#family > section {
+    position: absolute;
+}
+
+#charles-family {
+    left: 0;
+}
+
+#kartika-family {
+    right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0, .5);
-    color: #FFF;
 }
 
-#wedding-gift {
-    width: 100%;
-    font-size: 0.7rem;
-    text-align: center;
-    padding: 0 10px;
+#charles-family,
+#kartika-family {
+    font-size: 0.6em;
 }
 
-#quote {
-    width: 100%;
-    font-size: 0.7rem;
-    text-align: center;
+#charles-kartika-photo {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+
+
+#timeline {
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+
+#timeline > .vertical-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.timeline-step div {
+    width: 49%;
+    height: 150px;
+    display: inline-block;
+    padding: 25px;
+}
+
+#timeline > div {
+    /* text-align: left;
+    display: inline-block; */
+    /* background-color: blueviolet; */
+
+}
+
+#timeline > div:nth-child(2n) {
+    /* background-color: red;    */
+    text-align: right;
+
+}
+
+hr.vertical-line {
+    height: 100%;
+    width: 2px;
+    transform: rotate(90deg);
+    background-color: green;
+    border: none;
+}
+
+.timeline-step hr {
+    height: 2px;
+    width: 2px;
+    background-color: green;
+    border: none;
+}
+
+#gift {
+    position: relative;
+    background-color: bisque;
+}
+
+#gift p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #footer {
+    background-color: gray;
     position: fixed;
     bottom: 0;
-    right: 0;
     display: block;
     width: 100%;
-    height: 20px;
-    background-color: rgba(0,0,0,0.5);
-    border-top-left-radius: 50px;
-    width: 115px;
+    text-align: right;
 }
 
-#footer p {
-    display: block;
+#footer > p {
     margin: 0;
-    padding: 0;
-    font-size: 0.5rem;
-    text-align: right;
-    color: #FFF;    
-    padding-right: 5px;
-    line-height: 20px;
+    padding: 5px;
+    font-size: 0.6em;
+    font-weight: bold;
 }
