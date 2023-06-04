@@ -4,6 +4,7 @@
 
 body {
     font-size: 16px;
+    font-family: 'Tangerine', cursive;
 }
 
 .full-height {
@@ -11,17 +12,23 @@ body {
 }
 
 #hero {
-    font-size: 0.8em;
     background-image: url("./img/hero.JPG");
-    background-position: 50% 30%;
+    background-position: 50% 40%;
     position: relative;
-    margin-bottom: 50px;
+}
+
+#hero-text {
+    padding: 10px;
 }
 
 #hero-top {
+    font-weight: 400;
+    font-size: 2em;
+    padding-top: 20px;
     text-align: center;
 }
 
+#hero h1,
 #hero-top h1,
 #hero-top p,
 #hero-bottom h1,
@@ -32,16 +39,24 @@ body {
 }
 
 #hero-bottom {    
+    background-color: #cfe2f3;
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     text-align: center;
+    height: 100px;
+}
+
+#hero-bottom div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #family {
     position: relative;
-    background-color: antiquewhite;    
-    margin-bottom: 50px;
+    background-color: antiquewhite;
 }
 
 #family > section {
@@ -79,7 +94,6 @@ body {
 }
 
 #story {
-    margin-bottom: 50px;
 }
 
 #timeline {
@@ -130,17 +144,24 @@ hr.vertical-line {
     border: none;
 }
 
+#bottom-left-album {
+    background-image: url("./img/v.JPG");
+    background-position: center;
+    background-size: contain;
+}
+
 #gift {
     position: relative;
     background-image: url("./img/gift.JPG");
     background-position: 50% 50%;
-    margin-bottom: 50px; 
+    background-size: 125%;
 }
 
 #gift p {
     font-size: 1.5em;
+    color: white;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
