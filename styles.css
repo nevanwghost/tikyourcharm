@@ -11,7 +11,8 @@ body {
 
 #hero {
     font-size: 0.8em;
-    background-color: aqua;
+    background-image: url(./img/hero.JPG);
+    background-position: 50% 30%;
     position: relative;
 }
 
@@ -58,13 +59,18 @@ body {
 }
 
 #charles-kartika-photo {
-    background-color: pink;
+    background-image: url(./img/family.JPG);
+    background-position: 40% 15%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
     width: 200px;
-    height: 200px;
+    height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 100%;
+    
 }
 
 
@@ -129,9 +135,7 @@ hr.vertical-line {
 }
 
 #footer {
-    background-color: gray;
-    position: fixed;
-    bottom: 0;
+    background-color: gray;     
     display: block;
     width: 100%;
     text-align: right;
