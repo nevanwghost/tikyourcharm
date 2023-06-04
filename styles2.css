@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Tangerine', cursive;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+#hero {
+    background-image: url("./img/hero.JPG");
+    background-position: 50% 40%;
+    position: relative;
+}
+
+#hero-text-container {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    width: 250px;
+    border-top-left-radius: 100%;
+}
+
+#hero-text {
+    position: relative;
+    bottom: 0;
+}
+
+#hero-top {
+    font-weight: 400;
+    font-size: 2em;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#hero h1,
+#hero-top h1,
+#hero-top p,
+#hero-bottom h1,
+#hero-bottom p,
+#timeline h3,
+#timeline hr {
+    margin: 0 auto;   
+}
+
+#family {
+    position: relative;
+    background-color: antiquewhite;
+}
+
+#family > div {
+    position: absolute;
+}
+
+#charles-family {
+    top: 175px;
+    left: 50px;
+}
+
+#kartika-family {
+    right: 50px;
+    bottom: 175px;
+}
+
+#charles-family,
+#kartika-family {
+    font-size: 0.9em;
+}
+
+#charles-kartika-photo {
+    background-image: url("./img/family.JPG");
+    background-position: 40% 15%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    
+}
+
+#story {
+}
+
+#timeline {
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+
+#timeline > .vertical-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.timeline-step div {
+    width: 49%;
+    height: 150px;
+    display: inline-block;
+    padding: 25px;
+}
+
+#timeline > div {
+    /* text-align: left;
+    display: inline-block; */
+    /* background-color: blueviolet; */
+
+}
+
+#timeline > div:nth-child(2n) {
+    /* background-color: red;    */
+    text-align: right;
+
+}
+
+hr.vertical-line {
+    height: 100%;
+    width: 2px;
+    transform: rotate(90deg);
+    background-color: green;
+    border: none;
+}
+
+.timeline-step hr {
+    height: 2px;
+    width: 2px;
+    background-color: green;
+    border: none;
+}
+
+#bottom-left-album {
+    background-image: url("./img/v.JPG");
+    background-position: center;
+    background-size: contain;
+}
+
+#gift {
+    position: relative;
+    background-image: url("./img/gift.JPG");
+    background-position: 50% 50%;
+    background-size: 125%;
+}
+
+#gift p {
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer {
+    background-color: gray;     
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+#footer > p {
+    margin: 0;
+    padding: 5px;
+    font-size: 0.6em;
+    font-weight: bold;
+}
