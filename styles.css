@@ -5,7 +5,7 @@
 body {
     font-size: 16px;
     font-family: 'Montez', cursive;
-    background-image: url(./img/woodtable_repeat.jpg);
+    /* background-image: url(./img/woodtable_repeat.jpg); */
     background-size: 100%;
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ body {
 /* Invitation */
 #invitation-card {
     z-index: 100;
-    background-image: url("./img/invitation.JPG");
+    /* background-image: url("./img/invitation.JPG"); */
     background-position: 50% 40%;
     background-size: 130%;
 }
@@ -129,7 +129,7 @@ body {
 /* location */
 #location-card {
     z-index: 90;
-    background-image: url("./img/mandarinduck.jpg");    
+    /* background-image: url("./img/mandarinduck.jpg"); */
     background-position: 50% 50%;
     background-size: 130%;
 }
@@ -214,7 +214,7 @@ body {
 #family-card {
     z-index: 80;
     background-size: 100%;
-    background-image: url("./img/familytop.jpg");
+    /* background-image: url("./img/familytop.jpg"); */
     border-bottom-right-radius: 110px;
 }
 
@@ -295,7 +295,7 @@ body {
 
 
 #timeline-1-card {    
-    background-image: url("./img/timeline1.jpg");    
+    /* background-image: url("./img/timeline1.jpg");    */
     background-position: 50% 50%;
     background-size: 130%;
     z-index: 70;
@@ -387,7 +387,7 @@ body {
 
 
 #gift-card {
-    background-image: url(./img/gift.JPG);
+    /* background-image: url(./img/gift.JPG); */
     z-index: 50;
     background-size: 130%;
     background-position: center;
