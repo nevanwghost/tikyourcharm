@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var familySwiped = false;
     var timeline1Swiped = false;
     var timeline2Swiped = false;
-    var timeline3Swiped = false;
-    var timeline4Swiped = false;
-    var timeline5Swiped = false;
-    var timeline6Swiped = false;
     var giftSwiped = false;
 
 
@@ -66,42 +62,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
-    timeline3Card.addEventListener("click", function() {
-        if(!timeline3Swiped) {
-            timeline3Card.classList.add("timeline-animation");
-            timeline3Card.classList.remove("timeline-animation-reverse")
-            timeline3Swiped = true;
-        }
-    })
-
-    timeline4Card.addEventListener("click", function() {
-        if(!timeline4Swiped) {
-            timeline4Card.classList.add("timeline-animation");
-            timeline4Card.classList.remove("timeline-animation-reverse")
-            timeline4Swiped = true;
-        }
-    })
-
-    timeline5Card.addEventListener("click", function() {
-        if(!timeline5Swiped) {
-            timeline5Card.classList.add("timeline-animation");
-            timeline5Card.classList.remove("timeline-animation-reverse")
-            timeline5Swiped = true;
-        }
-    })
-
-    timeline6Card.addEventListener("click", function() {
-        if(!timeline6Swiped) {
-            timeline6Card.classList.add("timeline-animation");
-            timeline6Card.classList.remove("timeline-animation-reverse")
-            timeline6Swiped = true;
-        }
-    })
-
     giftCard.addEventListener("click", function() {
         if(!giftSwiped) {
             giftCard.classList.add("gift-animation");
-            giftCard.classList.remove("gift-animation0-reverse");
+            giftCard.classList.remove("gift-animation-reverse");
             giftSwiped = true;
         }
     })
@@ -112,10 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
             && familySwiped
             && timeline1Swiped
             && timeline2Swiped
-            && timeline3Swiped
-            && timeline4Swiped
-            && timeline5Swiped
-            && timeline6Swiped
             && giftSwiped ) {
             invitationCard.classList.remove("invitation-animation");
             invitationCard.classList.add("invitation-animation-reverse");            
@@ -128,14 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
             timeline1Card.classList.add("timeline-animation-reverse");
             timeline2Card.classList.remove("timeline-animation");
             timeline2Card.classList.add("timeline-animation-reverse");
-            timeline3Card.classList.remove("timeline-animation");
-            timeline3Card.classList.add("timeline-animation-reverse");
-            timeline4Card.classList.remove("timeline-animation");
-            timeline4Card.classList.add("timeline-animation-reverse");
-            timeline5Card.classList.remove("timeline-animation");
-            timeline5Card.classList.add("timeline-animation-reverse");
-            timeline6Card.classList.remove("timeline-animation");
-            timeline6Card.classList.add("timeline-animation-reverse");
             
             giftCard.classList.remove("gift-animation");
             giftCard.classList.add("gift-animation-reverse");
@@ -146,10 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
             familySwiped = false;
             timeline1Swiped = false;
             timeline2Swiped = false;
-            timeline3Swiped = false;
-            timeline4Swiped = false;
-            timeline5Swiped = false;
-            timeline6Swiped = false;
             giftSwiped = false;
         }
     })
