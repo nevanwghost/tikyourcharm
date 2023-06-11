@@ -2,20 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     var invitationCard = document.getElementById("invitation-card");
     var locationCard = document.getElementById("location-card");
     var familyCard = document.getElementById("family-card");
-    var timeline1Card = document.getElementById("timeline-1-card");
-    var timeline2Card = document.getElementById("timeline-2-card");
-    var timeline3Card = document.getElementById("timeline-3-card");
-    var timeline4Card = document.getElementById("timeline-4-card");
-    var timeline5Card = document.getElementById("timeline-5-card");
-    var timeline6Card = document.getElementById("timeline-6-card");
+    var timelineCard = document.getElementById("timeline-card");
     var giftCard = document.getElementById("gift-card");
     var boardCard = document.getElementById("board-card");
 
     var invitationSwiped = false;
     var locationSwiped = false;
     var familySwiped = false;
-    var timeline1Swiped = false;
-    var timeline2Swiped = false;
+    var timelineSwiped = false;
     var giftSwiped = false;
 
 
@@ -46,19 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
-    timeline1Card.addEventListener("click", function() {
-        if(!timeline1Swiped) {
-            timeline1Card.classList.add("timeline-animation");
-            timeline1Card.classList.remove("timeline-animation-reverse")
-            timeline1Swiped = true;
-        }
-    })
-
-    timeline2Card.addEventListener("click", function() {
-        if(!timeline2Swiped) {
-            timeline2Card.classList.add("timeline-animation");
-            timeline2Card.classList.remove("timeline-animation-reverse")
-            timeline2Swiped = true;
+    timelineCard.addEventListener("click", function() {
+        if(!timelineSwiped) {
+            timelineCard.classList.add("timeline-animation");
+            timelineCard.classList.remove("timeline-animation-reverse")
+            timelineSwiped = true;
         }
     })
 
@@ -74,8 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(invitationSwiped
             && locationSwiped
             && familySwiped
-            && timeline1Swiped
-            && timeline2Swiped
+            && timelineSwiped
             && giftSwiped ) {
             invitationCard.classList.remove("invitation-animation");
             invitationCard.classList.add("invitation-animation-reverse");            
@@ -84,10 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
             familyCard.classList.remove("family-animation");
             familyCard.classList.add("family-animation-reverse");
 
-            timeline1Card.classList.remove("timeline-animation");
-            timeline1Card.classList.add("timeline-animation-reverse");
-            timeline2Card.classList.remove("timeline-animation");
-            timeline2Card.classList.add("timeline-animation-reverse");
+            timelineCard.classList.remove("timeline-animation");
+            timelineCard.classList.add("timeline-animation-reverse");
             
             giftCard.classList.remove("gift-animation");
             giftCard.classList.add("gift-animation-reverse");
@@ -96,8 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
             invitationSwiped = false;
             locationSwiped = false;
             familySwiped = false;
-            timeline1Swiped = false;
-            timeline2Swiped = false;
+            timelineSwiped = false;
             giftSwiped = false;
         }
     })

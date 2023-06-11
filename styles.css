@@ -76,14 +76,6 @@ body {
     line-height: 100px;
 }
 
-#logo {
-    position: relative;
-    background-image: url("./img/logo.png");
-    width: 100px;
-    height: 100px;
-    background-position: center;
-    background-size: 100%;
-}
 
 .invitation-animation {
     animation: invitation-slider 1s ease-in-out;
@@ -287,19 +279,13 @@ body {
 
 
 
-#timeline-1-card {    
+#timeline-card {    
     background-image: url("./img/timeline1.jpg");   
     background-position: center;
     background-size: 130%;
     z-index: 70;
     background-repeat: no-repeat;
 }
-
-
-#timeline-2-card {
-    z-index: 69;
-}
-
 
 .timeline-content {
     position: absolute;
@@ -432,9 +418,22 @@ body {
     font-size: 2em;
     height: 100px;
     width: 100%;
-    top: 200px;    
+    top: 200px;
 }
 
+#board-card-content p {
+    margin: 0;
+}
+
+#logo {
+    position: relative;
+    background-image: url("./img/logo.png");
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: 100%;
+    margin: 0 auto;
+}
 
 /* @media only screen and (min-width: 480px) {
     body {
