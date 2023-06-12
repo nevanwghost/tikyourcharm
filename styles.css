@@ -2,33 +2,31 @@
     box-sizing: border-box;   
 }
 
+html {
+    overflow: hidden;   
+}
+
 body {
-    position: relative;
     font-size: 16px;
     font-family: 'Montez', cursive;
     background-image: url(./img/wood.jpg);
     overflow: hidden;
     display: block;
     background-size: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 #container {
-    /* background-color: pink; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 80vw;
-    height: 100vh;
-    max-width: 480px;
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    max-width: 360px;
     max-height: 768px;
 
     margin: 0 auto;
-
-    opacity: 1;
-
 }
 
 
@@ -49,7 +47,7 @@ body {
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    max-width: 480px;
+    max-width: 360px;
     max-height: 768px;
 }
 
