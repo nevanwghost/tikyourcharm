@@ -25,7 +25,6 @@ body {
     height: 80vh;
     max-width: 360px;
     max-height: 768px;
-
     margin: 0 auto;
 }
 
@@ -52,6 +51,7 @@ body {
     height: 100%;
     max-width: 360px;
     max-height: 768px;
+    overflow: hidden;
 }
 
 /* Invitation */
@@ -59,29 +59,29 @@ body {
     z-index: 100;
     background-image: url("./img/invitation.JPG");
     background-position: center;
-    background-size: 130%;
+    background-size: 250%;
     background-repeat: no-repeat;
 }
 
 
 #invitation-card-header {
-    position: relative;
-    /* background-color: rgba(255,255,255, 0); */
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    top: 200px;
-    width: 411px;
-    color: #FFF;
+    position: absolute;
+    background-color: #FFF;
+    height: 50px;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+    padding-right: 5px;
 }
 
 
 #invitation-card-header > h1 {
     margin: 0;
     padding: 0;
-    font-size: 2em;
-    position: absolute;
+    font-size: 1.5em;
     /* left: 100px; */
-    line-height: 100px;
+    line-height: 50px;
+    display: block;
 }
 
 
@@ -126,10 +126,8 @@ body {
 /* location */
 #location-card {
     z-index: 90;
-    background-image: url("./img/mandarinduck.jpg");
-    background-position: center;
-    background-size: 130%;
-    background-repeat: no-repeat;
+    display: flex;
+    background-color: #FFF;
 }
 
 
@@ -138,8 +136,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,.6);
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
 }
 
 .white-overlay-80 {
@@ -147,17 +143,26 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,.8);
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
 }
 
 #location-card-content {
-    position: absolute;
+    padding-top: 25px;
+    background-color: rgba(255,255,255, .3);
+    height: 100px;
     text-align: center;
     width: 100%;
-    top: 250px;
 }
 
+#mandarin-duck-photo {
+    position: absolute;
+    background-image: url(./img/mandarinduck.jpg);
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    background-size: 130%;
+    background-position: center;
+    box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+}
 
 
 #location-card-content > h2 {
@@ -205,28 +210,23 @@ body {
 /* family */
 #family-card {
     z-index: 80;
-    background-size: center;
+    background-color: #FFF;
+    /* background-size: center;
     background-image: url("./img/familytop.jpg");
-    /* border-bottom-right-radius: 110px; */
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 #family-card-content > h3 {
-    position: absolute;
     margin: 0;
-    padding: 0;
+    padding: 10px 20px;
     font-size: 1.2em;
-    top: 100px;
-    height: 100px;
 }
 
 #family-card-content > h3:first-child {
-    left: 10%;
     text-align: left;
 }
 
 #family-card-content > h3:nth-child(2) {
-    right: 10%;
     text-align: right;
 }
 
@@ -234,12 +234,9 @@ body {
     position: absolute;
     background-image: url(./img/family.JPG);
     width: 100%;
-    height: 70%;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    height: 65%;
     bottom: 0;
-    background-size: 100%;
+    background-size: 140%;
     background-position: 100% 100%;
     box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
 }
@@ -284,34 +281,29 @@ body {
 }
 
 
-
-
-
 #timeline-card {    
     background-image: url("./img/timeline1.jpg");   
     background-position: center;
-    background-size: 130%;
+    background-size: 200%;
     z-index: 70;
     background-repeat: no-repeat;
 }
 
 .timeline-content {
-    position: absolute;
+    position: relative;
     text-align: center;
-    padding: 60px;
-    top: 100px;
+    padding: 100px 20px 0 20px;
 }
 
 .timeline-content > h3 {
-    margin: 0 0 50px 0;
     padding: 0;
-    font-size: 1.5em;    
+    font-size: 1.2em;    
 }
 
 .timeline-content > p {
     font-family: 'Itim', sans-serif;
     line-height: 20px;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .timeline-animation {
@@ -357,22 +349,24 @@ body {
 #gift-card {
     background-image: url(./img/gift.JPG);
     z-index: 50;
-    background-size: 130%;
+    background-size: 180%;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #gift-card-content {
-    position: absolute;
+    position: relative;
     text-align: center;
     padding: 50px;
-    top: 200px;
 }
 
 #gift-card-content > p {
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .gift-animation {
