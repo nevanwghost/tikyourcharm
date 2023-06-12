@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     var invitationCard = document.getElementById("invitation-card");
+    var invitationCardPhoto = document.getElementById("invitation-card-photo")
     var invitationCardText = document.getElementById("invitation-text")
     
     var locationCard = document.getElementById("location-card");
+    var locationCardPhoto = document.getElementById("location-card-photo");
     var locationCardText = document.getElementById("location-text");
 
     var familyCard = document.getElementById("family-card");
+    var familyCardPhoto = document.getElementById("family-card-photo");
+    var familyCardMaleText = document.getElementById("male-family");
+    var familyCardFemaleText = document.getElementById("female-family");
+
     var timelineCard = document.getElementById("timeline-card");
     var giftCard = document.getElementById("gift-card");
     var boardCard = document.getElementById("board-card");
@@ -21,20 +27,36 @@ document.addEventListener("DOMContentLoaded", function() {
     invitationCard.addEventListener("click", function () {
 
         if(!invitationSwiped) {
-            invitationSwiped = true;
-            invitationCard.classList.add("invitation-animation");
-            locationCardText.classList.add("text-inset");
+
+            invitationCardPhoto.classList.remove("invitation-photo-animation");
+            invitationCardPhoto.classList.add("invitation-photo-animation-reverse");
+            invitationCard.classList.add("invitation-animation");            
             invitationCard.classList.remove("invitation-animation-reverse");
+            invitationSwiped = true;
+
+            setTimeout(function () {
+                locationCardText.classList.add("text-inset");
+                locationCardPhoto.classList.add("location-photo-animation")
+            }, 1100)
         }
     })
 
     locationCard.addEventListener("click", function () {
         if(!locationSwiped) {
+            locationCardPhoto.classList.remove("location-photo-animation");
+            locationCardPhoto.classList.add("location-photo-animation-reverse");
             locationCard.classList.add("location-animation");
-            locationCard.classList.remove("location-animation-reverse");
+            locationCard.classList.remove("location-animation-reverse");            
             locationCardText.classList.remove("text-inset");
             locationCardText.classList.add("text-inset-reverse");
             locationSwiped = true;
+
+            setTimeout(function() {                
+                familyCardMaleText.classList.add("text-inset");
+                familyCardFemaleText.classList.add("text-inset");
+                familyCardPhoto.classList.add("family-photo-animation");
+                
+            }, 1100)
         }
         
         
@@ -42,8 +64,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     familyCard.addEventListener("click", function() {
         if(!familySwiped) {
+            familyCardPhoto.classList.remove("family-photo-animation");
+            familyCardPhoto.classList.add("family-photo-animation-reverse");
             familyCard.classList.add("family-animation");
             familyCard.classList.remove("family-animation-reverse");
+
+            familyCardMaleText.classList.remove("text-inset");
+            familyCardMaleText.classList.add("text-inset-reverse");
+
+            familyCardFemaleText.classList.remove("text-inset");
+            familyCardFemaleText.classList.add("text-inset-reverse");
+
             familySwiped = true;
         }
     })
@@ -73,12 +104,16 @@ document.addEventListener("DOMContentLoaded", function() {
             invitationCard.classList.remove("invitation-animation");
             invitationCard.classList.add("invitation-animation-reverse");    
 
+            locationCardPhoto.classList.remove("location-photo-animation-reverse");
             locationCard.classList.remove("location-animation");
             locationCardText.classList.remove("text-inset-reverse");
             locationCard.classList.add("location-animation-reverse");
 
+            familyCardPhoto.classList.remove("family-photo-animation-reverse");
             familyCard.classList.remove("family-animation");
             familyCard.classList.add("family-animation-reverse");
+            familyCardMaleText.classList.remove("text-inset-reverse");
+            familyCardFemaleText.classList.remove("text-inset-reverse");
 
             timelineCard.classList.remove("timeline-animation");
             timelineCard.classList.add("timeline-animation-reverse");
@@ -92,6 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
             familySwiped = false;
             timelineSwiped = false;
             giftSwiped = false;
+
+            setTimeout(function() {
+                invitationCardPhoto.classList.remove("invitation-photo-animation-reverse");
+                invitationCardPhoto.classList.add("invitation-photo-animation");
+            }, 1200)
         }
     })
 });

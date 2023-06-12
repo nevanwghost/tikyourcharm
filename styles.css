@@ -37,7 +37,16 @@ body {
     -webkit-background-clip: text;
        -moz-background-clip: text;
             background-clip: text;    
-    animation: text-inset-opacity 3s ease-in-out;
+    animation: text-inset-opacity 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.text-inset-reverse {
+    background-color: #222;
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;    
+    animation: text-inset-opacity-reverse .3s ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -46,34 +55,18 @@ body {
         color: #222;
         opacity: 0;
     }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
-    }
     100% {
+        opacity: 1;
         color: transparent; 
         text-shadow: 2px 2px 5px rgba(255,255,255,1);
     }
 }
 
-.text-inset-reverse {
-    background-color: #222;
-    -webkit-background-clip: text;
-       -moz-background-clip: text;
-            background-clip: text;    
-    animation: text-inset-opacity-reverse 2s ease-in-out;
-    animation-fill-mode: forwards;
-}
 
 @keyframes text-inset-opacity-reverse {
     0% {
         color: transparent; 
         text-shadow: 2px 2px 5px rgba(255,255,255,1);
-    }
-    50% {
-        text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
     }
     100% {
         opacity: 0;
@@ -90,20 +83,40 @@ body {
     height: 100%;
     max-width: 360px;
     max-height: 768px;
-    overflow: hidden;
+}
+
+
+
+.white-overlay-60 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.6);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.white-overlay-80 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.8);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
 }
 
 /* Invitation */
 #invitation-card {
     z-index: 100;
     background-color: #FFF;
+    transform: rotate(3deg);
 }
 
 #invitation-card-photo {
     position: absolute;
     background-image: url("./img/invitation.JPG");
     width: 100%;
-    height: 90%;
+    height: 100%;
     top: 0;
     background-size: 250%;
     background-position: center;
@@ -111,6 +124,7 @@ body {
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     background-repeat: no-repeat;   
+    z-index: 99;
 }
 
 #invitation-card-header {
@@ -124,18 +138,29 @@ body {
 
 
 #invitation-card-header > h1 {
+    position: relative;
     margin: 0;
     padding: 0;
     font-size: 1.5em;
     /* left: 100px; */
     line-height: 50px;
     display: block;
+    z-index: 98;
 }
 
+.invitation-photo-animation {
+    animation: invitation-photo-slider .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+.invitation-photo-animation-reverse {
+    animation: invitation-photo-slider-reverse .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
 
 .invitation-animation {
     animation: invitation-slider 1s ease-in-out;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;    
 }
 
 .invitation-animation-reverse {
@@ -143,11 +168,38 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes invitation-slider {
+@keyframes invitation-photo-slider {
     0% {
         top: 0;
         left: 0;
+    }
+    100% {
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.5);
+        top: -55px;
+        left: 10px;
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes invitation-photo-slider-reverse {
+    0% {
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.5);
+        top: -55px;
+        left: 10px;
+        transform: rotate(4deg);
+    }
+    100% {
+        top: 0;
+        left: 0;
         transform: rotate(0deg);
+    }
+}
+
+@keyframes invitation-slider {
+    0%, 50% {
+        top: 0;
+        left: 0;
+        transform: rotate(3deg);
     }
     100% {
         top: 100px;
@@ -165,7 +217,7 @@ body {
     100% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(3deg);
     }
 }
 
@@ -176,22 +228,9 @@ body {
     z-index: 90;
     display: flex;
     background-color: #FFF;
+    transform: rotate(-1deg);
 }
 
-
-.white-overlay-60 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,.6);
-}
-
-.white-overlay-80 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,.8);
-}
 
 #location-card-content {
     padding-top: 25px;
@@ -201,15 +240,14 @@ body {
     width: 100%;
 }
 
-#mandarin-duck-photo {
+#location-card-photo {
     position: absolute;
     background-image: url(./img/mandarinduck.jpg);
     width: 100%;
-    height: 70%;
+    height: 100%;
     bottom: 0;
     background-size: 130%;
     background-position: center;
-    box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
 }
@@ -231,11 +269,48 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes location-slider {
+.location-photo-animation {
+    animation: location-photo-slider .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+.location-photo-animation-reverse {
+    animation: location-photo-slider-reverse .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes location-photo-slider {
     0% {
-        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    100% {
+        box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+        bottom: -150px;
+        left: -20px;
+        transform: rotate(-8deg);
+    }
+}
+
+@keyframes location-photo-slider-reverse {
+    0% {
+        box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+        bottom: -150px;
+        left: -20px;
+        transform: rotate(-8deg);
+    }
+    100% {
+        bottom: 0;
         left: 0;
         transform: rotate(0deg);
+    }
+}
+
+@keyframes location-slider {
+    0%, 50% {
+        top: 0;
+        left: 0;
+        transform: rotate(-1deg);
     }
     100% {
         top: 100px;
@@ -253,7 +328,7 @@ body {
     100% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(-1deg);
     }
 }
 
@@ -261,6 +336,7 @@ body {
 #family-card {
     z-index: 80;
     background-color: #FFF;
+    transform: rotate(2deg);
     /* background-size: center;
     background-image: url("./img/familytop.jpg");
     background-repeat: no-repeat; */
@@ -284,11 +360,10 @@ body {
     position: absolute;
     background-image: url(./img/family.JPG);
     width: 100%;
-    height: 65%;
+    height: 100%;
     bottom: 0;
     background-size: 140%;
     background-position: 100% 100%;
-    box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
 }
@@ -305,11 +380,48 @@ body {
     animation-delay: 0s;
 }
 
-@keyframes family-slider {
+.family-photo-animation {
+    animation: family-photo-slider .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+.family-photo-animation-reverse {
+    animation: family-photo-slider-reverse .5s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes family-photo-slider {
     0% {
-        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    100% {
+        box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+        bottom: -165px;
+        left: -20px;
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes family-photo-slider-reverse {
+    0% {
+        box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+        bottom: -165px;
+        left: -20px;
+        transform: rotate(-15deg);
+    }
+    100% {
+        bottom: 0;
         left: 0;
         transform: rotate(0deg);
+    }
+}
+
+@keyframes family-slider {
+    0%, 50% {
+        top: 0;
+        left: 0;
+        transform: rotate(2deg);
     }
     100% {
         top: 100px;
@@ -328,7 +440,7 @@ body {
     100% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(2deg);
     }
 }
 
@@ -338,7 +450,10 @@ body {
     background-position: center;
     background-size: 200%;
     z-index: 70;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transform: rotate(-2deg);
 }
 
 .timeline-content {
@@ -374,7 +489,7 @@ body {
     0% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(-2deg);
     }
     100% {
         top: 100px;
@@ -393,7 +508,7 @@ body {
     100% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(-2deg);
     }
 }
 
@@ -407,6 +522,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: rotate(-3deg);
 }
 
 #gift-card-content {
@@ -437,7 +553,7 @@ body {
     0% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(-3deg);
     }
     100% {
         top: 100px;
@@ -455,7 +571,7 @@ body {
     100% {
         top: 0;
         left: 0;
-        transform: rotate(0deg);
+        transform: rotate(-3deg);
     }
 }
 
@@ -495,7 +611,7 @@ body {
     #invitation-card {
         background-size: 150%;
     }
-    #mandarin-duck-photo {
+    #location-card-photo {
         background-size: 100%;
     }
 
