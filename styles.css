@@ -9,10 +9,10 @@ html {
 body {
     font-size: 16px;
     font-family: 'Montez', cursive;
-    background-image: url(./img/wood.jpg);
+    background-image: url(./img/marble.jpg);
     overflow: hidden;
     display: block;
-    background-size: 25%;
+    background-size: 150%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,8 +83,18 @@ body {
     height: 100%;
     max-width: 360px;
     max-height: 768px;
+    background-image: url("./img/paper.jpg");
+    background-size: 150%;
 }
 
+.white-overlay-40 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.4);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
 
 
 .white-overlay-60 {
@@ -125,6 +135,7 @@ body {
     border-bottom-left-radius: 100px;
     background-repeat: no-repeat;   
     z-index: 99;
+    border: 3px solid #FFF;
 }
 
 #invitation-card-header {
@@ -234,7 +245,6 @@ body {
 
 #location-card-content {
     padding-top: 25px;
-    background-color: rgba(255,255,255, .3);
     height: 100px;
     text-align: center;
     width: 100%;
@@ -246,10 +256,13 @@ body {
     width: 100%;
     height: 100%;
     bottom: 0;
-    background-size: 130%;
+    background-size: 120%;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFF;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
+    border: 3px solid #FFF;
 }
 
 
@@ -363,9 +376,12 @@ body {
     height: 100%;
     bottom: 0;
     background-size: 140%;
-    background-position: 100% 100%;
+    background-position: center;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
+    border: 3px solid #FFF;
+    background-repeat: no-repeat;
+    background-color: #FFF;
 }
 
 .family-animation {
@@ -446,7 +462,7 @@ body {
 
 
 #timeline-card {    
-    background-image: url("./img/timeline1.jpg");   
+    background-image: url("./img/timeline.jpg");   
     background-position: center;
     background-size: 200%;
     z-index: 70;
@@ -516,25 +532,36 @@ body {
 #gift-card {
     background-image: url(./img/gift.JPG);
     z-index: 50;
-    background-size: 180%;
+    background-color: #FFF;
+    /* background-size: 230%; */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotate(-3deg);
+    border: 3px solid #FFF;
+    overflow: hidden;
 }
 
 #gift-card-content {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(255,255,255, .8);
+    border-top-right-radius: 100px;
+    bottom: 0;
 }
 
 #gift-card-content > p {
     margin: 0;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .gift-animation {
