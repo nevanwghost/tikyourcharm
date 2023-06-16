@@ -4,6 +4,7 @@
 
 html {
     overflow: hidden;   
+    font-size: 16px;
 }
 
 body {
@@ -13,13 +14,15 @@ body {
     /* font-family: 'Diphylleia', serif; */
     background-color: #FFF;
     /* background-image: url(./img/marble.jpg); */
+    background-image: url(./img/hummingbird.png);    
     overflow: hidden;
     display: block;
-    background-size: 150%;
+    background-size: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #505050;
 }
 
 #container {
@@ -124,7 +127,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     /* left: 100px; */
     line-height: 50px;
     display: block;
@@ -169,7 +172,6 @@ body {
 }
 
 
-
 /* location */
 #location-card {
     z-index: 90;
@@ -189,6 +191,7 @@ body {
 #pin {
     width: 12px;
 }
+
 #location-card-photo {
     position: absolute;
     background-image: url(./img/mandarinduck.jpg);
@@ -208,8 +211,7 @@ body {
 #location-card-content > h2 {
     margin: 0;
     padding: 0;
-    font-size: .9rem;
-    color: #505050;
+    font-size: 14px;    
 }
 
 .location-animation {
@@ -261,7 +263,7 @@ body {
 #family-card-content > h3 {
     position: absolute;
     margin: 0;
-    font-size: .8rem;
+    font-size: 12px;
     height: 80px;
     letter-spacing: .9px;
 }
@@ -334,75 +336,6 @@ body {
 }
 
 
-#timeline-card {    
-    background-image: url("./img/timeline.jpg");   
-    background-position: center;
-    background-size: 200%;
-    z-index: 70;
-    background-repeat: no-repeat;    
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    transform: rotate(-2deg);
-}
-
-.timeline-content {
-    position: relative;
-    text-align: center;
-    padding: 50px 20px 0 20px;
-}
-
-.timeline-content > h3 {
-    padding: 0;
-    font-size: 1.3rem;
-    height: 30px;
-}
-
-.timeline-content > p {
-    font-family: 'Diphylleia', serif;
-    line-height: 25px;
-    font-size: .8rem;
-}
-
-.timeline-animation {
-    animation: timeline-slider 1s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-}
-
-.timeline-animation-reverse {
-    animation: timeline-slider-reverse 1s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-}
-
-@keyframes timeline-slider {
-    0% {
-        top: 0;
-        left: 0;
-        transform: rotate(-2deg);
-    }
-    100% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(-30deg);
-    }
-}
-
-@keyframes timeline-slider-reverse {
-    0% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(-30deg);
-
-    }
-    100% {
-        top: 0;
-        left: 0;
-        transform: rotate(-2deg);
-    }
-}
-
-
 #gift-card {
     background-image: url(./img/gift.JPG);
     z-index: 50;
@@ -433,7 +366,7 @@ body {
     top: 10%;
     margin: 0;
     padding: 0 20px;
-    font-size: .8rem;
+    font-size: 12px;
     line-height: 20px;
     text-align: center;
 }
@@ -484,15 +417,16 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 0;
-    background-color: rgba(255,255,255,1);
-    background-image: url("./img/hummingbird.png");
-    background-size: 240%;
+    background-image: none;
+    background-color: rgba(255,255,255,.8);
+    /* background-image: url("./img/hummingbird.png");
+    background-size: 240%; */
     background-position: center;
 }
 
 #board-card-content {
     text-align: center;
-    font-size: 1rem;
+    font-size: 16px;
     height: 250px;
     width: 100%;
 }
@@ -512,7 +446,7 @@ body {
     margin: 0 auto;
 }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 360px) {
     #invitation-card {
         background-size: 150%;
     }
@@ -520,7 +454,7 @@ body {
         background-size: 120%;
     }
     #location-card-content > h2 {
-        font-size: 1.2rem;
+        font-size: 16px;
     }
     #family-card-photo {
         background-size: 120%;
@@ -529,25 +463,12 @@ body {
         background-size: 200%;
     }
     #family-card-content > h3 {
-        font-size: 1.2rem;    
-    }
-    .timeline-content > h3 {
-        padding: 0;
-        font-size: 1.6rem;
-        height: 50px;
-        margin: 0;    
-    }
-    .timeline-content > p {
-        padding: 20px;
-        font-family: 'Diphylleia', serif;
-        line-height: 25px;
-        font-size: .9rem;
-        margin: 0;
+        font-size: 14px;    
     }
     #gift-card-content > p {
         top: 20%;
         padding: 0 20px;
-        font-size: 1.1rem;
+        font-size: 14px;
         height: 165px;
     }
 }
