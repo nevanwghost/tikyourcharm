@@ -332,13 +332,13 @@ body {
 }
 
 #family-card-content > h3:first-child {
-    padding: 40px 0 0 10px;
+    padding: 60px 0 0 10px;
     text-align: left;
     float: left;
 }
 
 #family-card-content > h3:nth-child(2) {
-    padding: 40px 30px 0 0;
+    padding: 60px 10px 0 0;
     text-align: right;
     float: right;
 }
