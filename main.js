@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var familyCardMaleText = document.getElementById("male-family");
     var familyCardFemaleText = document.getElementById("female-family");
 
-    var timelineCard = document.getElementById("timeline-card");
     var giftCard = document.getElementById("gift-card");
     var boardCard = document.getElementById("board-card");
 
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var invitationSwiped = false;        
     var locationSwiped = false;
     var familySwiped = false;
-    var timelineSwiped = false;
     var giftSwiped = false;
 
 
@@ -52,14 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
-    timelineCard.addEventListener("click", function() {
-        if(!timelineSwiped) {
-            timelineCard.classList.add("timeline-animation");
-            timelineCard.classList.remove("timeline-animation-reverse")
-            timelineSwiped = true;
-        }
-    })
-
     giftCard.addEventListener("click", function() {
         if(!giftSwiped) {
             giftCard.classList.add("gift-animation");
@@ -72,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if(invitationSwiped
             && locationSwiped
             && familySwiped
-            && timelineSwiped
             && giftSwiped ) {
             invitationCard.classList.remove("invitation-animation");
             invitationCard.classList.add("invitation-animation-reverse");    
@@ -81,10 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
             locationCard.classList.add("location-animation-reverse");
 
             familyCard.classList.remove("family-animation");
-            familyCard.classList.add("family-animation-reverse");            
-
-            timelineCard.classList.remove("timeline-animation");
-            timelineCard.classList.add("timeline-animation-reverse");
+            familyCard.classList.add("family-animation-reverse");
             
             giftCard.classList.remove("gift-animation");
             giftCard.classList.add("gift-animation-reverse");
@@ -93,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
             invitationSwiped = false;
             locationSwiped = false;
             familySwiped = false;
-            timelineSwiped = false;
             giftSwiped = false;
         }
     })

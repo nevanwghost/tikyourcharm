@@ -124,7 +124,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     /* left: 100px; */
     line-height: 50px;
     display: block;
@@ -208,7 +208,7 @@ body {
 #location-card-content > h2 {
     margin: 0;
     padding: 0;
-    font-size: .9em;
+    font-size: .9rem;
     color: #505050;
 }
 
@@ -261,7 +261,7 @@ body {
 #family-card-content > h3 {
     position: absolute;
     margin: 0;
-    font-size: .8em;
+    font-size: .8rem;
     height: 80px;
     letter-spacing: .9px;
 }
@@ -353,14 +353,14 @@ body {
 
 .timeline-content > h3 {
     padding: 0;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     height: 30px;
 }
 
 .timeline-content > p {
     font-family: 'Diphylleia', serif;
     line-height: 25px;
-    font-size: .8em;
+    font-size: .8rem;
 }
 
 .timeline-animation {
@@ -433,7 +433,7 @@ body {
     top: 10%;
     margin: 0;
     padding: 0 20px;
-    font-size: .8em;
+    font-size: .8rem;
     line-height: 20px;
     text-align: center;
 }
@@ -485,16 +485,20 @@ body {
     align-items: center;
     z-index: 0;
     background-color: rgba(255,255,255,1);
+    background-image: url("./img/hummingbird.png");
+    background-size: 240%;
+    background-position: center;
 }
 
 #board-card-content {
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
     height: 250px;
     width: 100%;
 }
 
 #board-card-content p {
+    position: relative;
     margin: 0;
 }
 
@@ -516,7 +520,7 @@ body {
         background-size: 120%;
     }
     #location-card-content > h2 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
     #family-card-photo {
         background-size: 120%;
@@ -525,11 +529,11 @@ body {
         background-size: 200%;
     }
     #family-card-content > h3 {
-        font-size: 1.2em;    
+        font-size: 1.2rem;    
     }
     .timeline-content > h3 {
         padding: 0;
-        font-size: 1.6em;
+        font-size: 1.6rem;
         height: 50px;
         margin: 0;    
     }
@@ -537,13 +541,13 @@ body {
         padding: 20px;
         font-family: 'Diphylleia', serif;
         line-height: 25px;
-        font-size: .9em;
+        font-size: .9rem;
         margin: 0;
     }
     #gift-card-content > p {
         top: 20%;
         padding: 0 20px;
-        font-size: 1.1em;
+        font-size: 1.1rem;
         height: 165px;
     }
 }
