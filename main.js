@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
             invitationSwiped = true;
 
             setTimeout(function () {
-                locationCardText.classList.add("text-inset");
                 locationCardPhoto.classList.add("location-photo-animation")
             }, 1100)
         }
@@ -47,13 +46,9 @@ document.addEventListener("DOMContentLoaded", function() {
             locationCardPhoto.classList.add("location-photo-animation-reverse");
             locationCard.classList.add("location-animation");
             locationCard.classList.remove("location-animation-reverse");            
-            locationCardText.classList.remove("text-inset");
-            locationCardText.classList.add("text-inset-reverse");
             locationSwiped = true;
 
             setTimeout(function() {                
-                familyCardMaleText.classList.add("text-inset");
-                familyCardFemaleText.classList.add("text-inset");
                 familyCardPhoto.classList.add("family-photo-animation");
                 
             }, 1100)
@@ -68,12 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
             familyCardPhoto.classList.add("family-photo-animation-reverse");
             familyCard.classList.add("family-animation");
             familyCard.classList.remove("family-animation-reverse");
-
-            familyCardMaleText.classList.remove("text-inset");
-            familyCardMaleText.classList.add("text-inset-reverse");
-
-            familyCardFemaleText.classList.remove("text-inset");
-            familyCardFemaleText.classList.add("text-inset-reverse");
 
             familySwiped = true;
         }
@@ -106,14 +95,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             locationCardPhoto.classList.remove("location-photo-animation-reverse");
             locationCard.classList.remove("location-animation");
-            locationCardText.classList.remove("text-inset-reverse");
             locationCard.classList.add("location-animation-reverse");
 
             familyCardPhoto.classList.remove("family-photo-animation-reverse");
             familyCard.classList.remove("family-animation");
-            familyCard.classList.add("family-animation-reverse");
-            familyCardMaleText.classList.remove("text-inset-reverse");
-            familyCardFemaleText.classList.remove("text-inset-reverse");
+            familyCard.classList.add("family-animation-reverse");            
 
             timelineCard.classList.remove("timeline-animation");
             timelineCard.classList.add("timeline-animation-reverse");
