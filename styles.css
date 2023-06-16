@@ -636,14 +636,16 @@ body {
     }
     .timeline-content > h3 {
         padding: 0;
-        font-size: 1.4em;
-        height: 30px;
+        font-size: 1.6em;
+        height: 50px;
+        margin: 0;    
     }
     .timeline-content > p {
         padding: 20px;
         font-family: 'Itim', sans-serif;
         line-height: 25px;
         font-size: .9em;
+        margin: 0;
     }
     #gift-card-content > p {
         top: 40px;
