@@ -330,18 +330,17 @@ body {
     margin: 0;
     font-size: 1em;
     height: 80px;
+    top: 60px;
 }
 
 #family-card-content > h3:first-child {
-    padding: 60px 0 0 10px;
     text-align: left;
-    left: 0;
+    left: 10px;
 }
 
 #family-card-content > h3:nth-child(2) {
-    padding: 60px 10px 0 0;
     text-align: right;
-    right: 0;
+    right: 10px;
 }
 
 #family-card-photo {
@@ -626,16 +625,15 @@ body {
     }
     #family-card-content > h3 {
         font-size: 1.2em;
-        height: 150px;
     }
-
+/* 
     #family-card-content > h3:first-child {
         padding: 60px 0 0 20px;
     }
     
     #family-card-content > h3:nth-child(2) {
         padding: 60px 20px 0 0;
-    }
+    } */
     .timeline-content > h3 {
         padding: 0;
         font-size: 1.6em;
