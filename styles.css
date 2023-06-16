@@ -529,7 +529,7 @@ body {
 
 #gift-card-content > p {
     position: absolute;
-    top: 30px;
+    top: 30%;
     margin: 0;
     padding: 0 20px;
     font-size: 1em;
@@ -649,7 +649,7 @@ body {
         margin: 0;
     }
     #gift-card-content > p {
-        top: 40px;
+        top: 20%;
         padding: 0 20px;
         font-size: 1.1em;
         height: 165px;
