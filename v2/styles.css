@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;   
+}
+
+html {
+    overflow: hidden;   
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montez', cursive;
+    background-color: #FFF;
+    /* background-image: url(./img/marble.jpg); */
+    overflow: hidden;
+    display: block;
+    background-size: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    max-width: 300px;
+    max-height: 680px;
+    top: -50px;
+    margin: 0 auto;
+}
+
+.serif-font {
+    font-family: 'Itim', sans-serif;    
+}
+
+.text-inset {
+    background-color: #222;
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;    
+    color: transparent; 
+    text-shadow: 2px 2px 5px rgba(255,255,255,1);
+}
+
+.base-card {
+    position: absolute;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    max-height: 768px;
+    background-image: url("./img/paper.jpg");
+    background-size: 150%;
+}
+
+.white-overlay-40 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.4);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+
+.white-overlay-60 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.6);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.white-overlay-80 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.8);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+/* Invitation */
+#invitation-card {
+    z-index: 100;
+    background-color: #FFF;
+    transform: rotate(3deg);
+}
+
+#invitation-card-photo {
+    position: absolute;
+    background-image: url("./img/invitation.JPG");
+    width: 100%;
+    height: 92%;
+    top: 0;
+    background-size: 250%;
+    background-position: center;
+    box-shadow: 0 -5px 10px 2px rgba(0,0,0,.5);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-repeat: no-repeat;   
+    z-index: 99;
+    border: 3px solid #FFF;
+}
+
+#invitation-card-header {
+    position: absolute;
+    height: 50px;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+    padding-right: 5px;
+}
+
+
+#invitation-card-header > h1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    /* left: 100px; */
+    line-height: 50px;
+    display: block;
+    z-index: 98;
+}
+
+.invitation-animation {
+    animation: invitation-slider 1s ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+.invitation-animation-reverse {
+    animation: invitation-slider-reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes invitation-slider {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(3deg);
+    }
+    100% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes invitation-slider-reverse {
+    0% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(30deg);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(3deg);
+    }
+}
+
+
+
+/* location */
+#location-card {
+    z-index: 90;
+    display: flex;
+    background-color: #FFF;
+    transform: rotate(-1deg);
+}
+
+
+#location-card-content {
+    padding-top: 25px;
+    height: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#location-card-photo {
+    position: absolute;
+    background-image: url(./img/mandarinduck.jpg);
+    width: 100%;
+    height: 75%;
+    bottom: 0;
+    background-size: 175%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 3px solid #FFF;
+}
+
+
+#location-card-content > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.location-animation {
+    animation: location-slider 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.location-animation-reverse {
+    animation: location-slider-reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes location-slider {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(-1deg);
+    }
+    100% {
+        top: 100px;
+        left: -550px;
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes location-slider-reverse {
+    0% {
+        top: 100px;
+        left: -550px;
+        transform: rotate(-30deg);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(-1deg);
+    }
+}
+
+/* family */
+#family-card {
+    z-index: 80;
+    background-color: #FFF;
+    transform: rotate(2deg);
+    /* background-size: center;
+    background-image: url("./img/familytop.jpg");
+    background-repeat: no-repeat; */
+}
+
+#family-card-content > h3 {
+    margin: 0;
+    font-size: 1.1em;
+    height: 120px;
+}
+
+#family-card-content > h3:first-child {
+    padding: 20px 20px;
+    text-align: left;
+}
+
+#family-card-content > h3:nth-child(2) {
+    padding: 0 20px;
+    text-align: right;
+}
+
+#family-card-photo {
+    position: absolute;
+    background-image: url(./img/family.JPG);
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    background-size: 140%;
+    background-position: center;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 3px solid #FFF;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+}
+
+.family-animation {
+    animation: family-slider 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+.family-animation-reverse {
+    animation: family-slider-reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+@keyframes family-slider {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(2deg);
+    }
+    100% {
+        top: 100px;
+        left:-450px;
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes family-slider-reverse {
+    0% {
+        top: 100px;
+        left:-450px;
+        transform: rotate(-30deg);
+
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(2deg);
+    }
+}
+
+
+#timeline-card {    
+    background-image: url("./img/timeline.jpg");   
+    background-position: center;
+    background-size: 200%;
+    z-index: 70;
+    background-repeat: no-repeat;    
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transform: rotate(-2deg);
+}
+
+.timeline-content {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px 0 20px;
+}
+
+.timeline-content > h3 {
+    padding: 0;
+    font-size: 1.3em;
+    height: 30px;
+}
+
+.timeline-content > p {
+    font-family: 'Itim', sans-serif;
+    line-height: 25px;
+    font-size: .8em;
+}
+
+.timeline-animation {
+    animation: timeline-slider 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+.timeline-animation-reverse {
+    animation: timeline-slider-reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+@keyframes timeline-slider {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(-2deg);
+    }
+    100% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes timeline-slider-reverse {
+    0% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(-30deg);
+
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(-2deg);
+    }
+}
+
+
+#gift-card {
+    background-image: url(./img/gift.JPG);
+    z-index: 50;
+    background-color: #FFF;
+    background-size: 230%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-3deg);
+    border: 3px solid #FFF;
+    overflow: hidden;
+}
+
+#gift-card-content {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(255,255,255, .8);
+    border-top-right-radius: 100px;
+    bottom: 0;
+}
+
+#gift-card-content > p {
+    position: absolute;
+    top: 30%;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 1em;
+}
+
+.gift-animation {
+    animation: gift-slider 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+.gift-animation-reverse {
+    animation: gift-slider-reverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+@keyframes gift-slider {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(-3deg);
+    }
+    100% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes gift-slider-reverse {
+    0% {
+        top: 100px;
+        left: 550px;
+        transform: rotate(-30deg);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(-3deg);
+    }
+}
+
+
+
+#board-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    background-color: rgba(255,255,255,1);
+}
+
+#board-card-content {
+    text-align: center;
+    font-size: 1em;
+    height: 250px;
+    width: 100%;
+}
+
+#board-card-content p {
+    margin: 0;
+}
+
+#logo {
+    position: relative;
+    background-image: url("./img/logo.png");
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 300px) {
+    #invitation-card {
+        background-size: 150%;
+    }
+    #location-card-photo {
+        background-size: 120%;
+    }
+    #location-card-content > h2 {
+        font-size: 1.2em;
+    }
+    #family-card-photo {
+        background-size: 120%;
+    }
+    #gift-card {
+        background-size: 200%;
+    }
+    #family-card-content > h3 {
+        font-size: 1.2em;
+        height: 150px;
+    }
+
+    #family-card-content > h3:first-child {
+        float: left;
+        padding: 60px 0 0 20px;
+    }
+    
+    #family-card-content > h3:nth-child(2) {
+        float: right;
+        padding: 60px 20px 0 0;
+    }
+    .timeline-content > h3 {
+        padding: 0;
+        font-size: 1.6em;
+        height: 50px;
+        margin: 0;    
+    }
+    .timeline-content > p {
+        padding: 20px;
+        font-family: 'Itim', sans-serif;
+        line-height: 25px;
+        font-size: .9em;
+        margin: 0;
+    }
+    #gift-card-content > p {
+        top: 20%;
+        padding: 0 20px;
+        font-size: 1.1em;
+        height: 165px;
+    }
+}
