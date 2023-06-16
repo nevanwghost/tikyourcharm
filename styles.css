@@ -26,6 +26,7 @@ body {
     height: 80vh;
     max-width: 300px;
     max-height: 680px;
+    top: -50px;
     margin: 0 auto;
 }
 
