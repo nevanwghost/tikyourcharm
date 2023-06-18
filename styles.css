@@ -57,7 +57,7 @@ body {
     width: 100%;
     height: 100%;
     max-width: 240px;
-    max-height: 768px;
+    max-height: 680px;
     background-image: url("./img/paper.jpg");
     background-size: 150%;
     overflow: hidden;
@@ -96,7 +96,7 @@ body {
 #invitation-card {
     z-index: 100;
     background-color: #FFF;
-    transform: rotate(3deg);
+    transform: rotate(8deg);
 }
 
 #invitation-card-photo {
@@ -148,27 +148,23 @@ body {
 
 @keyframes invitation-slider {
     0% {
-        top: 0;
-        left: 0;
-        transform: rotate(3deg);
+        bottom: 0;        
+        transform: rotate(8deg);
     }
     100% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(30deg);
+        bottom: -375px;        
+        transform: rotate(-45deg);
     }
 }
 
 @keyframes invitation-slider-reverse {
     0% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
     100% {
-        top: 0;
-        left: 0;
-        transform: rotate(3deg);
+        bottom: 0;
+        transform: rotate(8deg);
     }
 }
 
@@ -177,7 +173,7 @@ body {
 #location-card {
     z-index: 90;
     background-color: #FFF;
-    transform: rotate(-1deg);
+    transform: rotate(6deg);
 }
 
 
@@ -230,27 +226,23 @@ body {
 
 @keyframes location-slider {
     0% {
-        top: 0;
-        left: 0;
-        transform: rotate(-1deg);
+        bottom: 0;
+        transform: rotate(6deg);
     }
     100% {
-        top: 100px;
-        left: -550px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
 }
 
 @keyframes location-slider-reverse {
     0% {
-        top: 100px;
-        left: -550px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
     100% {
-        top: 0;
-        left: 0;
-        transform: rotate(-1deg);
+        bottom: 0;
+        transform: rotate(6deg);
     }
 }
 
@@ -258,7 +250,7 @@ body {
 #family-card {
     z-index: 80;
     background-color: #FFF;
-    transform: rotate(2deg);
+    transform: rotate(4deg);
     /* background-size: center;
     background-image: url("./img/familytop.jpg");
     background-repeat: no-repeat; */
@@ -319,28 +311,24 @@ body {
 
 @keyframes family-slider {
     0% {
-        top: 0;
-        left: 0;
-        transform: rotate(2deg);
+        bottom: 0;
+        transform: rotate(4deg);
     }
     100% {
-        top: 100px;
-        left:-450px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
 }
 
 @keyframes family-slider-reverse {
     0% {
-        top: 100px;
-        left:-450px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
 
     }
     100% {
-        top: 0;
-        left: 0;
-        transform: rotate(2deg);
+        bottom: 0;
+        transform: rotate(4deg);
     }
 }
 
@@ -355,7 +343,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(-3deg);
+    transform: rotate(2deg);
     overflow: hidden;
 }
 
@@ -398,27 +386,23 @@ body {
 
 @keyframes gift-slider {
     0% {
-        top: 0;
-        left: 0;
-        transform: rotate(-3deg);
+        bottom: 0;
+        transform: rotate(2deg);
     }
     100% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
 }
 
 @keyframes gift-slider-reverse {
     0% {
-        top: 100px;
-        left: 550px;
-        transform: rotate(-30deg);
+        bottom: -375px;
+        transform: rotate(-45deg);
     }
     100% {
-        top: 0;
-        left: 0;
-        transform: rotate(-3deg);
+        bottom: 0;
+        transform: rotate(2deg);
     }
 }
 
@@ -467,7 +451,7 @@ body {
         background-size: 120%;
     }
     #location-card-content > h2 {
-        font-size: 16px;
+        font-size: 12px;
     }
     #family-card-photo {
         background-size: 120%;
@@ -476,12 +460,12 @@ body {
         background-size: 200%;
     }
     #family-card-content > h3 {
-        font-size: 14px;    
+        font-size: 12px;
     }
     #gift-card-content > p {
         top: 20%;
         padding: 0 20px;
-        font-size: 14px;
+        font-size: 12px;
         height: 165px;
     }
 }
