@@ -14,7 +14,7 @@ body {
     /* font-family: 'Diphylleia', serif; */
     background-color: #FFF;
     /* background-image: url(./img/marble.jpg); */
-    background-image: url(./img/hummingbird.png);    
+    /* background-image: url(./img/hummingbird.png);     */
     overflow: hidden;
     display: block;
     background-size: 75%;
@@ -60,6 +60,8 @@ body {
     max-height: 768px;
     background-image: url("./img/paper.jpg");
     background-size: 150%;
+    overflow: hidden;
+    border: 3px solid #FFF;
 }
 
 .white-overlay-40 {
@@ -98,10 +100,10 @@ body {
 }
 
 #invitation-card-photo {
-    position: absolute;
+    /* position: absolute; */
     background-image: url("./img/invitation.JPG");
     width: 100%;
-    height: 92%;
+    height: 90%;
     top: 0;
     background-size: 250%;
     background-position: center;
@@ -110,14 +112,13 @@ body {
     border-bottom-left-radius: 100px;
     background-repeat: no-repeat;   
     z-index: 99;
-    border: 3px solid #FFF;
 }
 
 #invitation-card-header {
-    position: absolute;
-    height: 50px;
+    /* position: absolute; */
+    /* height: 50px; */
     text-align: right;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
     padding-right: 5px;
 }
@@ -127,11 +128,11 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 22px;
     /* left: 100px; */
     line-height: 50px;
     display: block;
-    z-index: 98;
+    z-index: 98;    
     /* color: #444; */
 }
 
@@ -175,17 +176,20 @@ body {
 /* location */
 #location-card {
     z-index: 90;
-    display: flex;
     background-color: #FFF;
     transform: rotate(-1deg);
 }
 
 
 #location-card-content {
-    padding-top: 25px;
-    height: 100px;
+    /* padding: 50px 0;     */
     text-align: center;
     width: 100%;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #pin {
@@ -193,25 +197,24 @@ body {
 }
 
 #location-card-photo {
-    position: absolute;
+    /* position: absolute; */
     background-image: url(./img/mandarinduck.jpg);
     width: 100%;
     height: 70%;
-    bottom: 0;
+    /* bottom: 0; */
     background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #FFF;
     /* border-top-right-radius: 100px; */
-    border-bottom-left-radius: 100px;
-    border: 3px solid #FFF;
+    border-bottom-left-radius: 100px;    
 }
 
 
 #location-card-content > h2 {
     margin: 0;
     padding: 0;
-    font-size: 14px;    
+    font-size: 12px;    
 }
 
 .location-animation {
@@ -260,38 +263,42 @@ body {
     background-repeat: no-repeat; */
 }
 
+#family-card-content {
+    height: 175px;
+    padding: 10px;
+}
+
 #family-card-content > h3 {
-    position: absolute;
-    margin: 0;
-    font-size: 12px;
-    height: 80px;
-    letter-spacing: .9px;
+    /* position: absolute; */
+    display: block;
+    margin: 30px 0;
+    font-size: 10px;    
+    letter-spacing: .9px; 
 }
 
 #family-card-content > h3:first-child {
     text-align: left;    
-    top: 30px;
-    left: 10px;
+    /* left: 10px;
+    top: 25px; */
 }
 
 #family-card-content > h3:nth-child(2) {
     text-align: right;
-    right: 10px;
-    top: 100px;
-    
+    /* right: 10px;    
+    top: 60px; */
 }
 
 #family-card-photo {
-    position: absolute;
+    /* position: absolute; */
     background-image: url(./img/family.JPG);
     width: 100%;
     height: 70%;
-    bottom: 0;
-    background-size: 140%;
+    /* bottom: 0; */
+    background-size: 160%;
     background-position: center;
     /* border-top-right-radius: 100px; */
     border-bottom-left-radius: 100px;
-    border: 3px solid #FFF;
+    
     background-repeat: no-repeat;
     background-color: #FFF;
 }
@@ -347,11 +354,13 @@ body {
     justify-content: center;
     align-items: center;
     transform: rotate(-3deg);
-    border: 3px solid #FFF;
     overflow: hidden;
 }
 
 #gift-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -359,6 +368,7 @@ body {
     background-color: rgba(255,255,255, .8);
     /* border-top-right-radius: 100px; */
     bottom: 0;
+
 }
 
 #gift-card-content > p {
@@ -366,9 +376,10 @@ body {
     top: 10%;
     margin: 0;
     padding: 0 20px;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 20px;
     text-align: center;
+    
 }
 
 .gift-animation {
@@ -419,8 +430,8 @@ body {
     z-index: 0;
     background-image: none;
     background-color: rgba(255,255,255,.8);
-    /* background-image: url("./img/hummingbird.png");
-    background-size: 240%; */
+    background-image: url("./img/hummingbird.png");
+    background-size: 175%;
     background-position: center;
 }
 
