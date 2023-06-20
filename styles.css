@@ -12,12 +12,12 @@ body {
     font-family: 'Montez', cursive;
     /* font-family: 'Allura', cursive;     */
     /* font-family: 'Diphylleia', serif; */
-    background-color: #FFF;
-    background-image: url(./img/brick.jpg);
+    background-color: #CCC;
+    background-image: url(./img/snow.jpg);
     /* background-image: url(./img/hummingbird.png);     */
     overflow: hidden;
     display: block;
-    background-size: 75%;
+    background-size: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
