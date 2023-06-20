@@ -13,7 +13,7 @@ body {
     /* font-family: 'Allura', cursive;     */
     /* font-family: 'Diphylleia', serif; */
     background-color: #FFF;
-    /* background-image: url(./img/marble.jpg); */
+    background-image: url(./img/brick.jpg);
     /* background-image: url(./img/hummingbird.png);     */
     overflow: hidden;
     display: block;
@@ -22,7 +22,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #505050;
+    color: #505050; 
+    background-position: center;   
+    background-repeat: repeat;
 }
 
 #container {
@@ -58,7 +60,7 @@ body {
     height: 100%;
     max-width: 240px;
     max-height: 680px;
-    background-image: url("./img/paper.jpg");
+    background-image: url("./img/paper_blue.jpg");
     background-size: 150%;
     overflow: hidden;
     border: 3px solid #FFF;
@@ -148,22 +150,22 @@ body {
 
 @keyframes invitation-slider {
     0% {
-        bottom: 0;        
+        right: 0;        
         transform: rotate(8deg);
     }
     100% {
-        bottom: -375px;        
-        transform: rotate(-45deg);
+        right: -300px;        
+        transform: rotate(20deg);
     }
 }
 
 @keyframes invitation-slider-reverse {
     0% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
     100% {
-        bottom: 0;
+        right: 0;
         transform: rotate(8deg);
     }
 }
@@ -226,22 +228,22 @@ body {
 
 @keyframes location-slider {
     0% {
-        bottom: 0;
+        right: 0;
         transform: rotate(6deg);
     }
     100% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
 }
 
 @keyframes location-slider-reverse {
     0% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
     100% {
-        bottom: 0;
+        right: 0;
         transform: rotate(6deg);
     }
 }
@@ -311,23 +313,23 @@ body {
 
 @keyframes family-slider {
     0% {
-        bottom: 0;
+        right: 0;
         transform: rotate(4deg);
     }
     100% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
 }
 
 @keyframes family-slider-reverse {
     0% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
 
     }
     100% {
-        bottom: 0;
+        right: 0;
         transform: rotate(4deg);
     }
 }
@@ -369,6 +371,7 @@ body {
     font-size: 10px;
     line-height: 20px;
     text-align: center;
+    color: #222;
     
 }
 
@@ -386,22 +389,22 @@ body {
 
 @keyframes gift-slider {
     0% {
-        bottom: 0;
+        right: 0;
         transform: rotate(2deg);
     }
     100% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
 }
 
 @keyframes gift-slider-reverse {
     0% {
-        bottom: -375px;
-        transform: rotate(-45deg);
+        right: -300px;
+        transform: rotate(20deg);
     }
     100% {
-        bottom: 0;
+        right: 0;
         transform: rotate(2deg);
     }
 }
@@ -414,11 +417,11 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 0;
-    background-image: none;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(201,233,246, .75);
     background-image: url("./img/hummingbird.png");
-    background-size: 175%;
-    background-position: center;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 #board-card-content {
